@@ -38,14 +38,10 @@ export default {
       callback: "/auth/signed-in",
     },
     strategies: {
+      local: false,
       auth0: {
         domain: "amdsaad.us.auth0.com",
         clientId: "AxExiXY1zcTbjuF94BNDmXr8nWk4xZMR",
-        audience: "https://vercelnuxt-5mc2ygvvp-amdsaad.vercel.app/",
-        scope: ["openid", "profile", "email", "offline_access"],
-        responseType: "code",
-        grantType: "authorization_code",
-        codeChallengeMethod: "S256",
       },
     },
   },
