@@ -34,8 +34,8 @@ export default {
   modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
   auth: {
     redirect: {
-      login: "/", // redirect user when not connected
-      callback: "/auth/signed-in",
+      callback: "/profile",
+      logoutRedirectUri: "http://localhost:3000",
     },
     strategies: {
       local: false,
