@@ -15,7 +15,9 @@ export default {
       },
     });
 
-    console.log(hero);
+    if (!hero.isHero || !hero.isAdmin) {
+      redirect(302, "/profile");
+    }
   },
 };
 </script>
