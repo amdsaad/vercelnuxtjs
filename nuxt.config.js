@@ -1,9 +1,8 @@
 export default {
-  mode: "spa",
+  ssr: true,
   /*
    ** Headers of the page
-   */
-  head: {
+   */ head: {
     title: process.env.npm_package_name || "",
     meta: [
       { charset: "utf-8" },
@@ -23,7 +22,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ["~/assets/scss/style.css"],
   /*
    ** Plugins to load before mounting the App
    */
@@ -44,6 +43,7 @@ export default {
   },
   auth: {
     redirect: {
+      login: "/",
       callback: "/profile",
       logoutRedirectUri: "http://localhost:3000",
     },

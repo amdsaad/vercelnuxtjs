@@ -21,6 +21,20 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  about: {
+    type: String,
+    required: false,
+  },
+  isAdmin: {
+    required: false,
+    type: Boolean,
+    default: false,
+  },
+  isHero: {
+    required: false,
+    type: Boolean,
+    default: false,
+  },
   createDate: {
     type: Date,
     required: true,

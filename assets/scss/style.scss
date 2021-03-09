@@ -1,3 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 40px;
+  max-width: 100%;
+  background-color: white;
+  label {
+    width: 150px;
+    padding: 0.5rem;
+    text-transform: capitalize;
+  }
+  input {
+    border: 1px solid #0d7cb4;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    flex: 1;
+    height: 40px;
+    padding: 0 1rem;
+  }
+  .search {
+    height: 40px;
+    width: 40px;
+    background-color: #0d7cb4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-left: -5px;
+    svg {
+      fill: white;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+.input-group.noborder {
+  border: none;
+}
+
 .profile {
   background-color: rgb(245, 245, 245);
   min-height: 100vh;
@@ -30,5 +78,89 @@
   }
   .my-info {
     display: flex;
+  }
+}
+
+.admin-nav {
+  height: 60px;
+  background-color: #464646;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.admin-page {
+  display: flex;
+  height: 100vh;
+  .admin-side-nav {
+    width: 300px;
+    background-color: #0d7cb4;
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 2rem;
+      color: white;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      border-bottom: 1px solid rgb(221, 221, 221);
+    }
+  }
+  .admin-content {
+    padding: 2rem;
+    width: calc(100% - 300px);
+  }
+}
+
+.admin-user-info-area {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 1rem;
+
+  .input-group {
+    margin: 1rem 0;
+    margin-right: 2rem;
+    width: 45%;
+    input {
+      border-color: #0d7cb44f;
+    }
+  }
+  .checkbox {
+    width: 15%;
+    input {
+      height: 20px;
+    }
+  }
+  .about {
+    width: 100%;
+    margin: 1rem 0;
+    p {
+      margin: 1rem 0;
+    }
+    textarea {
+      margin: 1rem 0;
+      width: 100%;
+      height: 200px;
+      padding: 1rem;
+      border-color: #0d7cb44f;
+      outline: none;
+    }
+  }
+  .save {
+    width: 100%;
+    margin: 2rem 0;
+    button {
+      padding: 0.8rem 3rem;
+      background-color: #0d7cb4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
   }
 }
