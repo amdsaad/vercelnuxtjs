@@ -6,13 +6,17 @@
 export default {
   middleware: "auth",
 
-  async created() {
-    const hero = await this.$axios.$get(`/api/user/${this.$auth.user.email}`);
+  async created() {},
+
+  async asyncData({ redirect, $axios, $auth }) {
+    const hero = await $axios.$get(`/api/user/${$auth.user.email}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     console.log(hero);
   },
-
-  async asyncData({ redirect, $axios, $auth }) {},
 };
 </script>
 

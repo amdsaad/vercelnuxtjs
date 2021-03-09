@@ -2,6 +2,9 @@ const app = require("express")();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const User = require("./models/user");
+var cors = require("cors");
+
+app.use(cors());
 
 app.use(bodyParser.json());
 mongoose.connect(
