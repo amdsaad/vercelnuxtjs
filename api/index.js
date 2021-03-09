@@ -39,6 +39,7 @@ app.post("/api/user", async (req, res) => {
 //find one user
 
 app.get("/api/users", async (req, res) => {
+  console.log("usesr");
   res.send("hello");
 });
 app.get("/api", async (req, res) => {
