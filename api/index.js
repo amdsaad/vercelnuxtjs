@@ -38,6 +38,9 @@ app.post("/api/user", async (req, res) => {
 
 //find one user
 
+app.get("/api/users", async (req, res) => {
+  res.send("hello");
+});
 app.get("/api", async (req, res) => {
   try {
     const subscribers = await Subscriber.find();

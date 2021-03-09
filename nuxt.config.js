@@ -31,7 +31,17 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth-next", "@nuxtjs/proxy"],
+  axios: {
+    proxy: true,
+  },
+  proxy: {
+    "/api/": {
+      target: "http://localhost:3000/api",
+      pathRewrite: { "^/api/": "" },
+      changeOrigin: true,
+    },
+  },
   auth: {
     redirect: {
       callback: "/profile",
