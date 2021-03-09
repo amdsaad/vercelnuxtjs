@@ -40,6 +40,7 @@ export default {
     strategies: {
       local: false,
       auth0: {
+        scheme: "oauth2",
         domain: "amdsaad.us.auth0.com",
         clientId: "AxExiXY1zcTbjuF94BNDmXr8nWk4xZMR",
       },
